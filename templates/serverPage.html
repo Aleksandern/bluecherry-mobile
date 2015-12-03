@@ -1,0 +1,45 @@
+<ion-view style="" title="Server 1">
+    <ion-content class="has-header" padding="'true'">
+        <div class="row">
+            <div class="col" ng-repeat="camera in cameras">
+                <div style="" class="list card" ng-class="{'camera-selected' : camera_selected === camera}" on-tap="selectCamera(camera)">
+                    <div class="item item-divider">{{ camera.title }}</div>
+                    <div class="item item-body">
+                        <video ng-src="{{ camera.link | trusted }}" type="video/mp4" id="camera-{{ camera.id }}" style="width: 100%; max-height: 150px" ng-model="page.player" on-double-tap="playerTap()" on-tap="selectCamera(camera)" preload="metadata" webkit-playsinline="webkit-playsinline"></video>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col col-50">
+                <div style="" class="list card">
+                    <div class="item item-divider"></div>
+                    <div class="item item-body">
+                        <video ng-src="" type="video/mp4" id="camera-{{ camera.id }}" style="width: 100%; max-height: 150px" ng-model="page.player" on-double-tap="playerTap()" on-tap="selectCamera(camera)" preload="metadata" webkit-playsinline="webkit-playsinline"></video>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </ion-content>
+
+
+
+    <ion-footer-bar class="footer-server bar-positive" >
+        <div class="row">
+            <div class="col">            
+                <button class="button button-full button-clear" on-tap="play()">Play/Stop</button>
+            </div>
+            <div class="col">            
+                <a class="button button-full button-clear" href="#/menu/cameraArchive">Archive</a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">            
+                <button class="button button-full button-clear">Play All</button>
+            </div>
+            <div class="col">            
+                <button class="button button-full button-clear">Stop All</button>
+            </div>
+        </div>
+    </ion-footer-bar>
+</ion-view>

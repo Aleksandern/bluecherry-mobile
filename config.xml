@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<widget id="com.phonegap.bluecherry864365" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+  <name>Bluecherry</name>
+  <description>
+        Bluecherry project
+    </description>
+  <author email="alex.melnikov@corp.bluecherry.net" href="http://www.bluecherrydvr.com/">
+      Bluecherry Team
+    </author>
+  <content src="index.html"/>
+  <access origin="*"/>
+  <preference name="webviewbounce" value="false"/>
+  <preference name="UIWebViewBounce" value="false"/>
+  <preference name="DisallowOverscroll" value="true"/>
+  <preference name="android-minSdkVersion" value="16"/>
+  <preference name="BackupWebStorage" value="none"/>
+  <preference name="AllowInlineMediaPlayback" value="true"/>
+  <preference name="SplashScreen" value="screen"/>
+  <preference name="SplashScreenDelay" value="3000"/>
+  <feature name="StatusBar">
+    <param name="ios-package" value="CDVStatusBar" onload="true"/>
+  </feature>
+  <platform name="android">
+    <icon src="img/android/icon/drawable-ldpi-icon.png" density="ldpi"/>
+    <icon src="img/android/icon/drawable-mdpi-icon.png" density="mdpi"/>
+    <icon src="img/android/icon/drawable-hdpi-icon.png" density="hdpi"/>
+    <icon src="img/android/icon/drawable-xhdpi-icon.png" density="xhdpi"/>
+    <icon src="img/android/icon/drawable-xxhdpi-icon.png" density="xxhdpi"/>
+    <icon src="img/android/icon/drawable-xxxhdpi-icon.png" density="xxxhdpi"/>
+    <splash src="img/android/icon/drawable-land-ldpi-screen.png" density="land-ldpi"/>
+    <splash src="img/android/icon/drawable-land-mdpi-screen.png" density="land-mdpi"/>
+    <splash src="img/android/icon/drawable-port-ldpi-screen.png" density="port-ldpi"/>
+    <splash src="img/android/icon/drawable-port-mdpi-screen.png" density="port-mdpi"/>
+  </platform>
+  <icon src="img/android/icon/drawable-xhdpi-icon.png"/>
+</widget>

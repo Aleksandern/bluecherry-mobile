@@ -1,0 +1,34 @@
+<ion-view style="" title="Archive" class="camera-archive">
+    <ion-content class="has-header" padding="false">
+        <form style="" class="list">
+            <label style="" class="item item-input">
+                <span class="input-label">Date From</span>
+                <input placeholder="" type="date">
+            </label>
+            <label style="" class="item item-input">
+                <span class="input-label">Date To</span>
+                <input placeholder="" type="date">
+            </label>
+        </form>
+
+        <ion-list style="">
+            <ion-item style="" ng-repeat="record in records" ng-class="{'record-selected' : record_selected === record}" on-tap="selectRecord(record)">
+                <div class="row">
+                    <div style="" class="col">
+                        {{ record.prior }}
+                    </div>
+                    <div style="" class="col">
+                        {{ record.date }}
+                    </div>
+                </div>
+            </ion-item>
+        </ion-list>
+    </ion-content>
+
+    <ion-footer-bar class="bar-positive footer-bar-custom">
+        <button class="footer-bar-item item-center button button-clear icon-left ion-play" on-tap="play()"></button>
+    </ion-footer-bar>
+</ion-view>
+
+
+
